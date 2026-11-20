@@ -20,6 +20,19 @@ Claude must never:
 This file and `.claude/settings.json` are tool configuration and may
 stay in the repository. They are not credits.
 
+## Conversation
+
+Unless asked otherwise:
+
+- Keep replies short and focused on one thing.
+- Ask one short question at a time. Never list several points or
+  choices to decide at once: each may need its own back and forth.
+- Keep context in the plan file, not in chat. Record decisions there
+  and do not repeat what is still open.
+- Do not ask permission for the obvious next step of an agreed plan.
+  Do it and report. Still ask before commits, pushes, tags, issues,
+  pull requests and releases.
+
 ## When attribution would appear
 
 If any action would put Claude's or Anthropic's name on this work,
