@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Accept: Block data made of the token values 0xFF, 0xFE,
+// DOTS 0.1.x. Accept: Block data made of the token values 0xFF, 0xFE,
 // 0xFD, 0x02 and 0x01. They are data, since count says where the run
 // ends.
 

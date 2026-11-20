@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Reject: 0x03 where a run or end-of-blocks is expected.
+// DOTS 0.1.x. Reject: MALFORMED at offset 11. 0x03 where a run or
+// end-of-blocks is expected.
 
 // header
 0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"

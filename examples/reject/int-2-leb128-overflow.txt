@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Reject: frame-rate is 2^64, one more than the largest
-// LEB128 value allowed.
+// DOTS 0.1.x. Reject: OVERFLOW at offset 10. frame-rate is 2^64, one
+// more than the largest LEB128 value allowed.
 
 // header
 0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"

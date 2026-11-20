@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Accept: A clear in the first frame. It is redundant,
+// DOTS 0.1.x. Accept: A clear in the first frame. It is redundant,
 // since the first frame starts from the initial state anyway.
 
 // header

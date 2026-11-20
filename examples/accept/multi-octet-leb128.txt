@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Accept: A 200 by 4 grid and a run at column 150: both
+// DOTS 0.1.x. Accept: A 200 by 4 grid and a run at column 150: both
 // take two LEB128 octets.
 
 // header

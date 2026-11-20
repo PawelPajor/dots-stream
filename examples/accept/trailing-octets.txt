@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Accept: Octets after end-of-stream. They are not part of
+// DOTS 0.1.x. Accept: Octets after end-of-stream. They are not part of
 // the stream and are ignored.
 
 // header

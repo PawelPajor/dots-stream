@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Accept: One frame with one block run of one block, 0x39
+// DOTS 0.1.x. Accept: One frame with one block run of one block, 0x39
 // (the example of Sections 4 and 5 of dots-content.md).
 
 // header

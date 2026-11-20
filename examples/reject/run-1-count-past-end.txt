@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Reject: count is 4 but one octet of data follows. The
-// reader takes the remaining 4 octets, including end-of-stream, as data
-// and then runs out of stream.
+// DOTS 0.1.x. Reject: TRUNCATED at offset 19. count is 4 but one octet
+// of data follows. The reader takes the remaining 4 octets, including
+// end-of-stream, as data and then runs out of stream.
 
 // header
 0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"

@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Reject: A run at (0,4) in a grid of 4 rows. Its count is
-// 0, so that no cell is also outside the grid (DEC-5).
+// DOTS 0.1.x. Reject: OUTSIDE_GRID at offset 13. A run at (0,4) in a
+// grid of 4 rows. Its count is 0, so that no cell is also outside the
+// grid (DEC-5).
 
 // header
 0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"

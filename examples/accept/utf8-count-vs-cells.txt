@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Accept: A text run at column 13 of 16 with count 5: its
+// DOTS 0.1.x. Accept: A text run at column 13 of 16 with count 5: its
 // octets decode to 3 characters, which end exactly in the last column.
 
 // header

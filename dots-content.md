@@ -5,7 +5,7 @@ Copyright (c) 2026 Pawel Pajor
 
 # DOTS content and composition
 
-Version 0.1.0.
+Version 0.1.1.
 
 ## 1. Introduction
 
@@ -148,8 +148,17 @@ The requirements of this document apply in addition to those of
 - **CON-1** A writer shall emit only streams that satisfy every stream
   requirement of this document.
 - **CON-2** A reader shall reject every stream that does not satisfy
-  every stream requirement of this document, and shall satisfy every
+  every stream requirement of this document, with the error that
+  Section 8 of [DOTS-BINARY] specifies, and shall satisfy every
   requirement of this document whose subject it is.
+
+Table 1: the code and offset of each stream requirement of this
+document, as ERR-3 of [DOTS-BINARY] refers to them.
+
+| Requirement | Code           | Offset of                                                                           |
+|-------------|----------------|-------------------------------------------------------------------------------------|
+| DEC-3       | `INVALID_TEXT` | the first octet of the first ill-formed UTF-8 sequence in the `data`                |
+| DEC-5       | `OUTSIDE_GRID` | the first octet of the first block or character assigned to a cell outside the grid |
 
 ## 9. References
 

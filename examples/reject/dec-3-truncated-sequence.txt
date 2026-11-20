@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Reject: Text data 0xE2 0x82: the first two octets of a
-// three-octet sequence. Each run is decoded on its own, so a sequence
-// cannot continue in the next run.
+// DOTS 0.1.x. Reject: INVALID_TEXT at offset 16. Text data 0xE2 0x82:
+// the first two octets of a three-octet sequence. Each run is decoded
+// on its own, so a sequence cannot continue in the next run.
 
 // header
 0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"

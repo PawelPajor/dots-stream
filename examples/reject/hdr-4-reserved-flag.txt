@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Reject: flags is 0x02: bit 1 is reserved and shall be 0.
+// DOTS 0.1.x. Reject: INVALID_VALUE at offset 7. flags is 0x02: bit 1
+// is reserved and shall be 0.
 
 // header
 0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"

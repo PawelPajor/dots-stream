@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Accept: frame-rate 0: each of the two frames is displayed
+// DOTS 0.1.x. Accept: frame-rate 0: each of the two frames is displayed
 // as soon as its end-of-text is read.
 
 // header

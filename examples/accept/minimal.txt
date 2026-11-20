@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Accept: The smallest stream: a header for a 1 by 1 grid,
+// DOTS 0.1.x. Accept: The smallest stream: a header for a 1 by 1 grid,
 // no frames, and end-of-stream.
 
 // header
