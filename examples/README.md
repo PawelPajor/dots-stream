@@ -11,11 +11,38 @@ Small streams, each illustrating a specific point of the specification
 possible while covering every requirement on a stream.
 
 Each example comes as a pair: a commented listing (`.txt`) and the same
-stream stored in a file (`.dots`). The `.dots` file holds exactly the
-`0x..` values of the listing, in order, with the comments removed. The
-first comment of each listing states the version of the specification
-the example is written against; all examples are written against
-version 0.1.0.
+stream as a binary file (`.dots`). Reading a listing is simple: drop the
+comments, from `//` to the end of the line, and the spaces, and what is
+left is a series of octets in C notation, `0x` and two hex digits,
+separated by commas. The `.dots` file holds those octets in binary, in
+the same order, and nothing else. The first comment of each listing
+states the version of the specification the example is written against;
+all examples are written against version 0.1.0.
+
+The Python below is one way to produce a `.dots` file from its
+listing. It writes the octets of the listing given as its argument to
+standard output, and stops at any token outside a comment that is not
+a `0x..` octet. It does not check the stream: a reject example comes
+out as faithfully as an accept one.
+
+```python
+import re, sys
+
+octets = bytearray()
+with open(sys.argv[1], encoding="utf-8") as listing:
+    for line in listing:
+        for token in line.split("//", 1)[0].replace(",", " ").split():
+            if not re.fullmatch(r"0x[0-9A-Fa-f]{2}", token):
+                sys.exit(f"{sys.argv[1]}: not an octet: {token}")
+            octets.append(int(token, 16))
+sys.stdout.buffer.write(octets)
+```
+
+For example, saved as `txt2dots.py`:
+
+```sh
+python3 txt2dots.py accept/one-run.txt > accept/one-run.dots
+```
 
 ## Accept
 
