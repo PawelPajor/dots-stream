@@ -1,0 +1,31 @@
+// SPDX-License-Identifier: CC-BY-4.0
+// Copyright (c) 2026 Pawel Pajor
+
+// DOTS 0.1.0. Accept: frame-rate 0: each of the two frames is displayed
+// as soon as its end-of-text is read.
+
+// header
+0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"
+0x00, 0x01, 0x00,         // dots-version: major 0, minor 1, update 0
+0x00,                     // flags: bit 0 clear (no contains-text)
+0x10, 0x04,               // dimensions: 16 columns, 4 rows
+0x00,                     // frame-rate: 0 (as soon as read)
+
+// frame 1, block layer
+0x02, 0x00, 0x00, 0x01,   // run: position (0,0), count 1
+0x39,                     //   data: 1 block, 0x39
+0xFE,                     // end-of-blocks
+
+// frame 1, text layer
+0xFD,                     // end-of-text, no runs
+
+// frame 2, block layer
+0x02, 0x01, 0x00, 0x01,   // run: position (1,0), count 1
+0x39,                     //   data: 1 block, 0x39
+0xFE,                     // end-of-blocks
+
+// frame 2, text layer
+0xFD,                     // end-of-text, no runs
+
+// end
+0xFF                      // end-of-stream

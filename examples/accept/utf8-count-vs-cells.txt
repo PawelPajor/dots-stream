@@ -1,0 +1,24 @@
+// SPDX-License-Identifier: CC-BY-4.0
+// Copyright (c) 2026 Pawel Pajor
+
+// DOTS 0.1.0. Accept: A text run at column 13 of 16 with count 5: its
+// octets decode to 3 characters, which end exactly in the last column.
+
+// header
+0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"
+0x00, 0x01, 0x00,         // dots-version: major 0, minor 1, update 0
+0x01,                     // flags: bit 0 set (contains-text)
+0x10, 0x04,               // dimensions: 16 columns, 4 rows
+0x0A,                     // frame-rate: 10 Hz
+
+// frame 1, block layer
+0xFE,                     // end-of-blocks, no runs
+
+// frame 1, text layer
+0x02, 0x0D, 0x00, 0x05,   // run: position (13,0), count 5
+0x24, 0x30,               //   data: "$0", 2 characters in 2 octets
+0xE2, 0x82, 0xAC,         //   data: "€", 1 character in 3 octets
+0xFD,                     // end-of-text
+
+// end
+0xFF                      // end-of-stream

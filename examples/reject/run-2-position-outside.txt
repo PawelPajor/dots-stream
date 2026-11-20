@@ -1,0 +1,22 @@
+// SPDX-License-Identifier: CC-BY-4.0
+// Copyright (c) 2026 Pawel Pajor
+
+// DOTS 0.1.0. Reject: A run at (0,4) in a grid of 4 rows. Its count is
+// 0, so that no cell is also outside the grid (DEC-5).
+
+// header
+0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"
+0x00, 0x01, 0x00,         // dots-version: major 0, minor 1, update 0
+0x00,                     // flags: bit 0 clear (no contains-text)
+0x10, 0x04,               // dimensions: 16 columns, 4 rows
+0x0A,                     // frame-rate: 10 Hz
+
+// frame 1, block layer
+0x02, 0x00, 0x04, 0x00,   // run: position (0,4), count 0
+0xFE,                     // end-of-blocks
+
+// frame 1, text layer
+0xFD,                     // end-of-text, no runs
+
+// end
+0xFF                      // end-of-stream

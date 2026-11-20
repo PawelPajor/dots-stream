@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: CC-BY-4.0
+// Copyright (c) 2026 Pawel Pajor
+
+// DOTS 0.1.0. Accept: frame-rate is 2^64 - 1, the largest LEB128 value
+// allowed, written in ten octets.
+
+// header
+0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"
+0x00, 0x01, 0x00,         // dots-version: major 0, minor 1, update 0
+0x00,                     // flags: bit 0 clear (no contains-text)
+0x10, 0x04,               // dimensions: 16 columns, 4 rows
+0xFF, 0xFF, 0xFF, 0xFF,   // frame-rate: 2^64 - 1 Hz,
+0xFF, 0xFF, 0xFF, 0xFF,   //   octets 5 to 8,
+0xFF, 0x01,               //   octets 9 and 10
+
+// end
+0xFF                      // end-of-stream
