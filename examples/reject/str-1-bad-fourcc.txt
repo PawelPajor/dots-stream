@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Reject: The fourcc is "DOTS". ABNF %x values are exact
-// octets, so case matters.
+// DOTS 0.1.x. Reject: MALFORMED at offset 0. The fourcc is "DOTS". ABNF
+// %x values are exact octets, so case matters.
 
 // header
 0x44, 0x4F, 0x54, 0x53,   // fourcc "DOTS": wrong

@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Reject: A grid with 0 columns. The stream has no frames,
-// so that no run is also outside the grid.
+// DOTS 0.1.x. Reject: INVALID_VALUE at offset 8. A grid with 0 columns.
+// The stream has no frames, so that no run is also outside the grid.
 
 // header
 0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"

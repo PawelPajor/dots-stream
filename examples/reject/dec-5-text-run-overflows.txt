@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Reject: A text run at column 15 of 16 whose 4 octets
-// decode to 2 characters; the second falls outside the grid.
+// DOTS 0.1.x. Reject: OUTSIDE_GRID at offset 19. A text run at column
+// 15 of 16 whose 4 octets decode to 2 characters; the second falls
+// outside the grid.
 
 // header
 0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"

@@ -5,7 +5,7 @@ Copyright (c) 2026 Pawel Pajor
 
 # DOTS binary format
 
-Version 0.1.0.
+Version 0.1.1.
 
 ## 1. Introduction
 
@@ -19,8 +19,10 @@ are outside this document and are covered by [DOTS-CONTENT].
 
 This document and [DOTS-CONTENT] have the same `major` and `minor`
 version, which are the ones a stream carries in its `dots-version`. A
-normative change to either document changes `major` or `minor` in both.
-The `update` numbers of the two documents are independent.
+change to the format, that is, to what a stream is, changes `major` or
+`minor` in both documents. Any other change, including one to the
+requirements on readers or writers, changes `update` in the documents
+it touches. The `update` numbers of the two documents are independent.
 
 ### 1.1. Conventions
 
@@ -160,22 +162,75 @@ requirement of this document.
 
 - **CNF-1** A writer shall emit only well-formed streams.
 - **CNF-2** A reader shall reject every stream that is not well-formed,
-  and shall satisfy every requirement of this document whose subject is
+  with the error that Section 8 specifies, and shall satisfy every requirement of this document whose subject is
   a reader.
 
 [DOTS-CONTENT] adds requirements for streams and readers, and states
 the conformance of the format as a whole.
 
-## 8. References
+## 8. Errors
 
-### 8.1. Normative references
+A reader returns one result for every stream: `OK`, or exactly one
+error. An error is a code, which says what kind of failure it is, and
+an offset, which says where. There are no warnings.
+
+The offset of an octet is the number of octets before it in the
+stream. The offset of a part of the stream is the offset of its first
+octet. The offset of the end of the stream is its length.
+
+Table 1: codes.
+
+| Code                  | Value | Meaning                                                      |
+|-----------------------|-------|--------------------------------------------------------------|
+| `OK`                  | 0     | the stream is well-formed                                    |
+| `UNSUPPORTED_VERSION` | 1     | `dots-version` is not one this document specifies            |
+| `INVALID_VALUE`       | 2     | a field matches the grammar but its value is not allowed     |
+| `UNEXPECTED_TEXT`     | 3     | a run in the text layer while `contains-text` is 0           |
+| `OUTSIDE_GRID`        | 4     | a position, or decoded content, falls outside the grid       |
+| `TRUNCATED`           | 5     | the stream ends before `end-of-stream`                       |
+| `MALFORMED`           | 6     | an octet that does not match the grammar                     |
+| `OVERFLOW`            | 7     | a `leb128` whose value is above `2^64 - 1`                   |
+| `INVALID_TEXT`        | 8     | `data` in the text layer that is not well-formed UTF-8       |
+
+Table 2: the code and offset of each stream requirement of this
+document.
+
+| Requirement                                       | Code                  | Offset of                                                  |
+|---------------------------------------------------|-----------------------|------------------------------------------------------------|
+| STR-1, the stream ends before it matches `stream` | `TRUNCATED`           | the end of the stream                                      |
+| STR-1, otherwise                                  | `MALFORMED`           | the first octet with which no match of `stream` continues  |
+| INT-2                                             | `OVERFLOW`            | the `leb128`                                               |
+| HDR-1                                             | `UNSUPPORTED_VERSION` | `major`, or `minor` if `major` is 0                        |
+| HDR-3                                             | `INVALID_VALUE`       | `x`, or `y` if `x` is at least 1                           |
+| HDR-4                                             | `INVALID_VALUE`       | `flags`                                                    |
+| HDR-5                                             | `UNEXPECTED_TEXT`     | the run                                                    |
+| RUN-1                                             | `TRUNCATED`           | the end of the stream                                      |
+| RUN-2                                             | `OUTSIDE_GRID`        | `x`, or `y` if `x < columns`                               |
+
+- **ERR-1** A reader shall return `OK` for a well-formed stream.
+- **ERR-2** For any other stream, a reader shall return exactly one
+  error: the code and offset of the first violated requirement, the
+  one with the smallest offset.
+- **ERR-3** The code and offset of a violated requirement shall be the
+  ones Table 2 gives, or [DOTS-CONTENT] gives for its own requirements.
+- **ERR-4** A reader shall report a failure that is not the violation
+  of a stream requirement, such as a grid too large for its memory, an
+  I/O failure or misuse of its interface, apart from the codes of
+  Table 1.
+
+Codes are unsigned integers. A code is never reused or renumbered;
+adding one is a change to this document.
+
+## 9. References
+
+### 9.1. Normative references
 
 - [RFC5234] Crocker, D., Ed., and P. Overell, Augmented BNF for Syntax
   Specifications: ABNF, STD 68, RFC 5234, January 2008.
 - [RFC7405] Kyzivat, P., Case-Sensitive String Support in ABNF,
   RFC 7405, December 2014.
 
-### 8.2. Informative references
+### 9.2. Informative references
 
 - [DOTS-CONTENT] DOTS content and composition, version 0.1.
 

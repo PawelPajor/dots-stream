@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Accept: Two block runs of one frame cover cell (1,0); the
+// DOTS 0.1.x. Accept: Two block runs of one frame cover cell (1,0); the
 // later one wins, leaving 0xFF 0x00 0xFF.
 
 // header

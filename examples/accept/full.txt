@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Accept: A complete tiny stream with text: block and text runs, a held
-// frame, zero blocks and erasers, and a clear.
+// DOTS 0.1.x. Accept: A complete tiny stream with text: block and text
+// runs, a held frame, zero blocks and erasers, and a clear.
 
 // header
 0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"

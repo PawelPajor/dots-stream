@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Accept: frame-rate is 2^64 - 1, the largest LEB128 value
+// DOTS 0.1.x. Accept: frame-rate is 2^64 - 1, the largest LEB128 value
 // allowed, written in ten octets.
 
 // header

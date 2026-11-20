@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Reject: The stream stops after a complete frame, without
-// end-of-stream.
+// DOTS 0.1.x. Reject: TRUNCATED at offset 18. The stream stops after a
+// complete frame, without end-of-stream.
 
 // header
 0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"

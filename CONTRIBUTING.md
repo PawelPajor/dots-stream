@@ -10,12 +10,14 @@ what goes into the specification is in [GOVERNANCE.md](GOVERNANCE.md).
 
 ## 1. Kinds of change
 
-- **Normative**: changes what a stream is or how it is read: the ABNF
-  blocks, the requirements or the definitions of the specification. A
-  normative change raises `major` or `minor` in both
+- **Normative**: changes the ABNF blocks, the requirements or the
+  definitions of the specification. A normative change that changes the
+  format, that is, what a stream is, raises `major` or `minor` in both
   [dots-binary.md](dots-binary.md) and
-  [dots-content.md](dots-content.md), as Section 1 of dots-binary.md
-  requires.
+  [dots-content.md](dots-content.md). Any other normative change, such
+  as one to the requirements on readers or writers, raises `update` in
+  the documents it touches. Section 1 of dots-binary.md states the
+  rule.
 - **Editorial**: changes the wording of the specification without
   changing its meaning. It raises `update` in the document it touches.
 - **Other**: the README, the logo, the examples index, the layout of the
@@ -28,7 +30,7 @@ what goes into the specification is in [GOVERNANCE.md](GOVERNANCE.md).
    needs, and whether existing streams stay valid.
 2. Make the change on a branch, one change per branch, for example
    `feat/<short-name>`.
-3. In the same branch, raise the version in both documents and add or
+3. In the same branch, raise the version as Section 1 says and add or
    update the [examples](examples/README.md) the change affects.
 4. Open a pull request that refers to the issue (`Closes #N`).
 5. The maintainer accepts or declines it and gives the reason on the
@@ -50,12 +52,12 @@ Commit messages follow
 [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/).
 The types used here are:
 
-| Type    | Use                                                                       | Version           |
-|---------|---------------------------------------------------------------------------|-------------------|
-| `feat`  | Normative addition                                                        | `minor`           |
-| `fix`   | Normative correction                                                      | `minor`           |
-| `docs`  | Editorial change to the specification, or a change to other documentation | `update`, or none |
-| `chore` | Layout, tooling, housekeeping                                             | none              |
+| Type    | Use                                                                       | Version                                            |
+|---------|---------------------------------------------------------------------------|----------------------------------------------------|
+| `feat`  | Normative addition                                                        | `minor`, or `update` if the format does not change |
+| `fix`   | Normative correction                                                      | `minor`, or `update` if the format does not change |
+| `docs`  | Editorial change to the specification, or a change to other documentation | `update`, or none                                  |
+| `chore` | Layout, tooling, housekeeping                                             | none                                               |
 
 A change that makes existing streams invalid, or changes their meaning,
 is marked with `!` after the type, or a `BREAKING CHANGE:` footer, and

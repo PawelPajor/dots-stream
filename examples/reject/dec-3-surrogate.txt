@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Reject: Text data 0xED 0xA0 0x80: the surrogate U+D800,
-// which is no Unicode scalar value.
+// DOTS 0.1.x. Reject: INVALID_TEXT at offset 16. Text data 0xED 0xA0
+// 0x80: the surrogate U+D800, which is no Unicode scalar value.
 
 // header
 0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"

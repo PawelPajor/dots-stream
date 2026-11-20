@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-4.0
 // Copyright (c) 2026 Pawel Pajor
 
-// DOTS 0.1.0. Accept: An eraser on a cell that has no character: it
+// DOTS 0.1.x. Accept: An eraser on a cell that has no character: it
 // changes nothing.
 
 // header
