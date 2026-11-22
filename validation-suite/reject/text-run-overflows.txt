@@ -1,0 +1,20 @@
+// A text run at column 15 of 16 whose 4 octets decode to 2 characters;
+// the second falls outside the grid.
+
+// header
+0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"
+0x00, 0x01, 0x00,         // dots-version: major 0, minor 1, update 0
+0x01,                     // flags: bit 0 set (contains-text)
+0x10, 0x04,               // dimensions: 16 columns, 4 rows
+0x0A,                     // frame-rate: 10 Hz
+
+// frame 1, block layer
+0xFE,                     // end-of-blocks, no runs
+
+// frame 1, text layer
+0x02, 0x0F, 0x00, 0x04,   // run: position (15,0), count 4
+0xE2, 0x82, 0xAC, 0x41,   //   data: "€A", the "A" at (16,0)
+0xFD,                     // end-of-text
+
+// end
+0xFF                      // end-of-stream

@@ -1,0 +1,8 @@
+requirements = ["CMP-3"]
+
+[header]
+dots-version = "0.1.0"
+contains-text = true
+columns = 16
+rows = 4
+frame-rate = "10"

@@ -1,8 +1,3 @@
-<!--
-SPDX-License-Identifier: CC-BY-4.0
-Copyright (c) 2026 Pawel Pajor
--->
-
 # DOTS binary format
 
 Version 0.1.1.

@@ -1,0 +1,12 @@
+// The smallest stream: a header for a 1 by 1 grid, no frames, and
+// end-of-stream.
+
+// header
+0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"
+0x00, 0x01, 0x00,         // dots-version: major 0, minor 1, update 0
+0x00,                     // flags: bit 0 clear (no contains-text)
+0x01, 0x01,               // dimensions: 1 column, 1 row
+0x0A,                     // frame-rate: 10 Hz
+
+// end
+0xFF                      // end-of-stream

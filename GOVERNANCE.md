@@ -1,8 +1,3 @@
-<!--
-SPDX-License-Identifier: CC-BY-4.0
-Copyright (c) 2026 Pawel Pajor
--->
-
 # DOTS governance
 
 This document says where the DOTS specification lives, who decides what

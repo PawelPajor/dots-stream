@@ -1,0 +1,8 @@
+requirements = ["HDR-2"]
+
+[header]
+dots-version = "0.1.7"
+contains-text = false
+columns = 16
+rows = 4
+frame-rate = "10"

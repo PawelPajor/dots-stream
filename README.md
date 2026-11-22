@@ -1,16 +1,5 @@
-<!--
-SPDX-License-Identifier: CC-BY-4.0
-Copyright (c) 2026 Pawel Pajor
--->
-
 # DOTS
 Dots On Tiny Surfaces
-
-
-> *One day Trurl the constructor put together a machine that could build*
-> *anything beginning with the letter 'n'.*
->
-> -- Stanislaw Lem, _The Cyberiad_ (trans. Michael Kandel)
 
 DOTS is a small format for animated pictures: a grid of cells, eight
 dots in each, switching on and off from one frame to the next,
@@ -46,8 +35,9 @@ The details are in the specification, which has two parts:
 [dots-content.md](dots-content.md) covers what it carries and how
 dots and text combine.
 
-A few small example streams, each illustrating a specific point of the
-specification, are listed [here](examples/README.md).
+Two complete example streams are listed [here](examples/README.md).
+Small streams, each illustrating a specific point of the specification,
+make up the [validation suite](validation-suite/README.md).
 
 Logo can be found [here](logo/README.md).
 

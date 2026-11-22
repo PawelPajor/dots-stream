@@ -2,27 +2,18 @@ DOTS specification documents
 
 Copyright (c) 2026 Pawel Pajor
 
-SPDX-License-Identifier: CC-BY-4.0
-
 These documents are licensed under the Creative Commons Attribution 4.0
 International License (CC BY 4.0). You may copy, redistribute and adapt
 them for any purpose, including commercially, if you give appropriate
 credit, provide a link to the license, and indicate if you made changes.
 
-Full license text:    https://creativecommons.org/licenses/by/4.0/legalcode
+Full license text:    LICENSES/CC-BY-4.0.txt,
+                      https://creativecommons.org/licenses/by/4.0/legalcode
 Readable summary:     https://creativecommons.org/licenses/by/4.0/
 
 Suggested credit:
   DOTS specification by Pawel Pajor,
   https://github.com/PawelPajor/dots-stream,
   licensed under CC BY 4.0.
-
-Scope: every file in this repository, in every directory, including the
-example streams (.dots) and the logo images (.png), which cannot carry
-a notice of their own.
-
-Exception: the quotation from Stanislaw Lem, The Cyberiad, translated by
-Michael Kandel, at the top of README.md, is not covered by this license.
-It remains under the copyright of its owners.
 
 This license does not grant rights in the name DOTS. See GOVERNANCE.md.

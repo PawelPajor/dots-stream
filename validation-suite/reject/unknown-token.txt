@@ -1,0 +1,18 @@
+// 0x03 where a run or end-of-blocks is expected.
+
+// header
+0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"
+0x00, 0x01, 0x00,         // dots-version: major 0, minor 1, update 0
+0x00,                     // flags: bit 0 clear (no contains-text)
+0x10, 0x04,               // dimensions: 16 columns, 4 rows
+0x0A,                     // frame-rate: 10 Hz
+
+// frame 1, block layer
+0x03,                     // no rule starts with 0x03
+0xFE,                     // end-of-blocks
+
+// frame 1, text layer
+0xFD,                     // end-of-text, no runs
+
+// end
+0xFF                      // end-of-stream

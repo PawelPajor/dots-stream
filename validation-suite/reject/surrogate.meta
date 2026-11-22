@@ -1,0 +1,3 @@
+requirements = ["DEC-3"]
+code = "INVALID_TEXT"
+offset = 16

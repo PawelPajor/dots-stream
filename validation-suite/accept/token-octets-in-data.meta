@@ -1,0 +1,8 @@
+requirements = ["RUN-1", "DEC-1"]
+
+[header]
+dots-version = "0.1.0"
+contains-text = false
+columns = 16
+rows = 4
+frame-rate = "10"

@@ -1,0 +1,3 @@
+requirements = ["HDR-4"]
+code = "INVALID_VALUE"
+offset = 7

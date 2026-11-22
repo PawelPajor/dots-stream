@@ -1,0 +1,21 @@
+// Text data 0xE2 0x82: the first two octets of a three-octet sequence.
+// Each run is decoded on its own, so a sequence cannot continue in the
+// next run.
+
+// header
+0x64, 0x6F, 0x74, 0x73,   // fourcc "dots"
+0x00, 0x01, 0x00,         // dots-version: major 0, minor 1, update 0
+0x01,                     // flags: bit 0 set (contains-text)
+0x10, 0x04,               // dimensions: 16 columns, 4 rows
+0x0A,                     // frame-rate: 10 Hz
+
+// frame 1, block layer
+0xFE,                     // end-of-blocks, no runs
+
+// frame 1, text layer
+0x02, 0x00, 0x00, 0x02,   // run: position (0,0), count 2
+0xE2, 0x82,               //   data: 2 of the 3 octets of U+20AC
+0xFD,                     // end-of-text
+
+// end
+0xFF                      // end-of-stream

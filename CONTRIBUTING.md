@@ -1,8 +1,3 @@
-<!--
-SPDX-License-Identifier: CC-BY-4.0
-Copyright (c) 2026 Pawel Pajor
--->
-
 # Contributing to DOTS
 
 This document says how changes to this repository are made. Who decides
@@ -20,8 +15,8 @@ what goes into the specification is in [GOVERNANCE.md](GOVERNANCE.md).
   rule.
 - **Editorial**: changes the wording of the specification without
   changing its meaning. It raises `update` in the document it touches.
-- **Other**: the README, the logo, the examples index, the layout of the
-  repository. It changes no version.
+- **Other**: the README, the logo, the examples and validation suite
+  indexes, the layout of the repository. It changes no version.
 
 ## 2. Proposing a normative change
 
@@ -31,7 +26,9 @@ what goes into the specification is in [GOVERNANCE.md](GOVERNANCE.md).
 2. Make the change on a branch, one change per branch, for example
    `feat/<short-name>`.
 3. In the same branch, raise the version as Section 1 says and add or
-   update the [examples](examples/README.md) the change affects.
+   update the [examples](examples/README.md) and the
+   [validation suite](validation-suite/README.md) streams the change
+   affects.
 4. Open a pull request that refers to the issue (`Closes #N`).
 5. The maintainer accepts or declines it and gives the reason on the
    pull request. An accepted pull request is squash-merged into `main`.
@@ -39,12 +36,13 @@ what goes into the specification is in [GOVERNANCE.md](GOVERNANCE.md).
 Editorial and other changes may be proposed as a pull request without an
 issue. The maintainer may commit them directly to `main`.
 
-## 3. Examples
+## 3. Examples and validation suite
 
-The examples in this repository are few and small, each illustrating a
-specific point of the specification. They are versioned with it: an
-example states the version it conforms to, and a change that alters an
-example's meaning updates the example in the same pull request.
+The examples and the streams of the validation suite are few and small:
+the examples show complete streams, and each stream of the suite
+illustrates a specific point of the specification. They are versioned
+with it: each states the version it conforms to, and a change that
+alters its meaning updates it in the same pull request.
 
 ## 4. Commit messages
 

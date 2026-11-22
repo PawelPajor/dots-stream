@@ -1,0 +1,8 @@
+requirements = ["HDR-3", "STR-1"]
+
+[header]
+dots-version = "0.1.0"
+contains-text = false
+columns = 1
+rows = 1
+frame-rate = "10"
