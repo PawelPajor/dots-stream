@@ -61,9 +61,12 @@ frame-rate = "10"
 
 ### `.surface`
 
-UTF-8 text, one line per row of the grid and one character per cell:
-the cell's character if it has one, otherwise the Braille pattern of
-its block (Section 5 of dots-content.md). Frames follow each other in
-stream order, separated by an empty line; a stream without frames has
-an empty surface file. When comparing, U+2800 and U+0020 both stand
-for an empty cell; the files of the suite use U+2800.
+UTF-8 text, one character per cell: the cell's character if it has
+one, otherwise the Braille pattern of its block (Section 5 of
+dots-content.md). Cells follow each other row by row, each row from
+left to right, and frames follow each other in stream order. There are
+no line ends or separators: a cell's character may itself be LF or CR,
+so each frame is exactly `columns * rows` characters, taken from
+`.meta`. A stream without frames has an empty surface file. When
+comparing, U+2800 and U+0020 both stand for an empty cell; the files
+of the suite use U+2800.
