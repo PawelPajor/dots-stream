@@ -1,6 +1,6 @@
 # DOTS binary format
 
-Version 0.1.2.
+Version 0.1.1.
 
 ## 1. Introduction
 

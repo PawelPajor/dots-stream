@@ -1,6 +1,6 @@
 # DOTS content and composition
 
-Version 0.1.2.
+Version 0.1.1.
 
 ## 1. Introduction
 
